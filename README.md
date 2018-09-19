@@ -2,9 +2,14 @@
 This is a simple drawing application that has multiple functionalities available to the user.
 
 #### Dependencies
-<ul>
-  <li>DrawView library from ByoxCode is installed: https://github.com/ByoxCode/DrawView.git</li>
-</ul>
+DrawView library from ByoxCode is installed: https://github.com/ByoxCode/DrawView.git
+<p>Add this line to your build.gradle file:   </p>
+```
+implementation 'com.byox.drawview:drawview:1.3.1'
+```
+
+
+
 
 ## How to Use
 <ul>
