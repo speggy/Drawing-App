@@ -20,9 +20,9 @@ public class DrawingBoard extends AppCompatActivity {
         /*
         Wire up all tools
          */
-        final Button returnButton = findViewById(R.id.returnButton);
-        final Button clearButton = findViewById(R.id.clearButton);
-        final Button colorPickerButton = findViewById(R.id.colorPickerButton);
+        Button returnButton = findViewById(R.id.returnButton);
+        Button clearButton = findViewById(R.id.clearButton);
+        Button colorPickerButton = findViewById(R.id.colorPickerButton);
         colorMe = findViewById(R.id.draw_view);
 
         /*
@@ -59,8 +59,8 @@ public class DrawingBoard extends AppCompatActivity {
             @Override
             public void onStartDrawing() {
                 // Get color from PaintColorPicker
-                Intent setBrushColor = new Intent();
-                int brushColor = setBrushColor.getIntExtra("rgbValues", 0);
+                Intent receiveBrushColor = getIntent();
+                int brushColor = receiveBrushColor.getIntExtra("rgbValues", 0);
                 // Set the new brush color
                 colorMe.setDrawColor(brushColor);
 
@@ -86,6 +86,7 @@ public class DrawingBoard extends AppCompatActivity {
 
             }
         });
+
     }
 
 }

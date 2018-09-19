@@ -2,6 +2,7 @@ package com.corbinmcguire.corbinmcguire_homework1;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -54,6 +55,8 @@ public class PaintColorPicker extends AppCompatActivity {
         colorPickerBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveCustomColor();
+                // pass the chosen color to the brush to be drawn
                 PaintColorPicker.this.finish();
             }
         });
@@ -121,14 +124,31 @@ public class PaintColorPicker extends AppCompatActivity {
             }
         });
 
+        //int rgbValues = rgb(redValue, greenValue, blueValue);
+
+
     }
+
+    /**
+     * Sets the background of the TextView to the custom color specified by the user.
+     * @param redValue red color value
+     * @param greenValue green color value
+     * @param blueValue blue color view
+     * @param colorView TextView that will be changing color
+     */
     public void setColorViewColor(int redValue, int greenValue, int blueValue, TextView colorView)
     {
         // reflect the color chosen by the user.
         colorView.setBackgroundColor(rgb(redValue, greenValue, blueValue));
+    }
 
-        // pass the chosen color to the brush to be drawn
-        Intent passColor = new Intent();
+    /**
+     * Saves the custom color specified by the user and sends it to the DrawingBoard activity
+     */
+    public void saveCustomColor()
+    {
+        Intent passColor = new Intent(PaintColorPicker.this, DrawingBoard.class);
         passColor.putExtra("rgbValues", rgb(redValue, greenValue, blueValue));
+        startActivity(passColor);
     }
 }
