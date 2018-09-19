@@ -3,10 +3,10 @@ This is a simple drawing application that has multiple functionalities available
 
 #### Dependencies
 DrawView library from ByoxCode is installed: https://github.com/ByoxCode/DrawView.git
-<p>Add this line to your build.gradle file:   </p>
-```
-implementation 'com.byox.drawview:drawview:1.3.1'
-```
+<p>Add this line to your build.gradle file:</p>
+
+```implementation 'com.byox.drawview:drawview:1.3.1'```
+
 
 
 
