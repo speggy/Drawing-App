@@ -14,6 +14,7 @@ This is a simple drawing application that has multiple functionalities available
 </ul>
 
 ## Software Design
+<link rel="stylesheet" href="style.css">
 <p>For the main activity, the application creates 3 random values that serve as the red, green, and blue numerical values that get sent to a method that changes the color of the text in the text field. This seemed the most simple route because Java has an rgb() function that takes 3 integer values for each red/green/blue value. There is a formatter that converts the numerical values to the format specified in the assignment.</p>
 <img src="images/MainActivity.png" alt="Main Activity"/>
 <p>The Drawing Board acitivity implements functionality that allows data transfer between activities via Intents. Intents were used to get the custom color that the user specifies in the custom color activity. The drawing board also uses the restartDrawing() method to clear the screen. </p>
